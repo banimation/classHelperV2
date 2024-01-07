@@ -1,0 +1,28 @@
+#main-board-container {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+.main-board-item {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+}
+#today-meal-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #9197A1;
+}
+#today-meal-image {
+    width: 40px;
+}
+#today-meal-description {
+    color: #5B8DF0;
+}
+#today-meal-list {
+    padding: 20px;
+}
