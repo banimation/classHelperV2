@@ -1,3 +1,6 @@
+import { Bar } from '../components/titleBar/bar'
+import { Nav } from "../components/navigation/nav"
+
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
@@ -17,7 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <Bar></Bar>
         {children}
+        <Nav></Nav>
       </body>
     </html>
   )
