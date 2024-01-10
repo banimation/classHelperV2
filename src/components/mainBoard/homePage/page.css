@@ -1,15 +1,9 @@
-#main-board-container {
-    margin-top: 70px;
+#home-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 20px;
     gap: 20px;
-}
-.main-board-item {
-    background-color: #fff;
-    border-radius: 20px;
-    padding: 20px;
 }
 #today-meal-title {
     display: flex;
@@ -25,4 +19,20 @@
 }
 #today-meal-list {
     padding: 20px;
+}
+#deadline-tomorrow-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+.deadline-tomorrow {
+    font-size: 10px;
+    font-weight: bolder;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #F2F4F6;
+}
+.deadline-tomorrow-date {
+    color: red;
 }

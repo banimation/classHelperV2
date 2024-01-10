@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export default function Item(prop: {id: string}) {
     const id = prop.id
     const src = `/icons/${id}.svg`
@@ -8,10 +10,11 @@ export default function Item(prop: {id: string}) {
         "time-table": "시간표",
         "setting": "설정"
     }
+    const anchor = id !== "home" ? `/${id}` : "/"
     return (
-        <div className="nav-list-item">
+        <Link href={anchor} className="nav-list-item">
             <img src={src} alt="home" className="icon"/>
             <span>{itemName[id]}</span>
-        </div>
+        </Link>
     )
 }

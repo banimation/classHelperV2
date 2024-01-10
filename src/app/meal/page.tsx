@@ -1,9 +1,8 @@
-import { HomePage } from "@/components/mainBoard/homePage/page";
-
+import { MealPage } from "@/components/mainBoard/mealPage/page";
 export default async function Home() {
   return (
     <div className='main-board-container'>
-      <HomePage></HomePage>
+      <MealPage></MealPage>
     </div>
     
   )
