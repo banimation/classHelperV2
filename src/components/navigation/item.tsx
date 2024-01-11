@@ -7,7 +7,7 @@ export default function Item(prop: {id: string}) {
         "schedule": "일정",
         "home": "홈",
         "meal": "급식표",
-        "time-table": "시간표",
+        "timeTable": "시간표",
         "setting": "설정"
     }
     const anchor = id !== "home" ? `/${id}` : "/"
