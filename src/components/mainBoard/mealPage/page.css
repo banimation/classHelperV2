@@ -1,3 +1,19 @@
+a {
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  a:link {
+    color: #9197A1;
+    text-decoration: none;
+  }
+  a:visited {
+    color: #9197A1;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #9197A1;
+    text-decoration: none;
+}
 #meal-container {
     display: flex;
     flex-direction: column;

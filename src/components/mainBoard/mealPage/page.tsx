@@ -1,5 +1,5 @@
 import { TodayMeal } from "./todayMeal"
-import { MealSchedule } from "./mealSchedule";
+import { MealScheduleLink } from "./mealScheduleLink";
 import { Comment } from "./comment"
 import "./page.css"
 export function MealPage() {
@@ -7,7 +7,7 @@ export function MealPage() {
         <div id="meal-container">
             <TodayMeal></TodayMeal>
             <Comment></Comment>
-            <MealSchedule></MealSchedule>
+            <MealScheduleLink></MealScheduleLink>
         </div>
     )
 }
