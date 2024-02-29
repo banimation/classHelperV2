@@ -4,6 +4,7 @@ import { Nav } from "../components/navigation/nav"
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import React from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,9 +20,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <meta name="theme-color" content="#F2F4F6"></meta>
+      <link
+        rel="icon"
+        href="/icon?<generated>"
+        type="image/<generated>"
+        sizes="<generated>"
+      />
+      <link rel="manifest" href="/manifest.json"></link>
       <body className={inter.className}>
         <Bar></Bar>
-        {children}
+        {children} 
         <Nav></Nav>
       </body>
     </html>

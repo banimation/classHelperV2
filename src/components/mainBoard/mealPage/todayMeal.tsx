@@ -1,4 +1,4 @@
-type mealData = {mealData: Array<{date: string, meal: string, origin: string}>}
+type mealData = {state: boolean, mealData?: Array<{date: string, meal: string, origin: string}>}
 export async function TodayMeal() {
     let htmlMealInfo: Array<string> = ["데이터 없음", "(본 데이터는 neis API에서 제공하는 데이터를 사용중이며 데이터 관리는 영양 선생님이 관리합니다. 영양 선생님이 해당 달의 급식 데이터를 neis에 등록해야 정보가 표시됩니다.)"]
     let htmlOriginInfo: Array<string> = [""]
@@ -15,11 +15,13 @@ export async function TodayMeal() {
         cache: 'no-store'
     }
     const postMeal = await fetch("http://localhost/api/get-meal-data", fetchOption)
-    const mealJson: mealData= await postMeal.json()
-    const todayMeal = mealJson.mealData.filter((value) => value.date === ymd)
-    if(todayMeal.length !== 0) {
-        htmlMealInfo = todayMeal[0].meal.split("<br/>")
-        htmlOriginInfo = todayMeal[0].origin.split("<br/>")
+    const mealJson: mealData = await postMeal.json()
+    if(mealJson.state && mealJson.mealData) {
+        const todayMeal = mealJson.mealData.filter((value) => value.date === ymd)
+        if(todayMeal.length !== 0) {
+            htmlMealInfo = todayMeal[0].meal.split("<br/>")
+            htmlOriginInfo = todayMeal[0].origin.split("<br/>")
+        }
     }
     return (
         <div className="board-item">

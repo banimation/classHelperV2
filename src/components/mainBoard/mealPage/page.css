@@ -1,16 +1,16 @@
 a {
     text-decoration: none;
     -webkit-tap-highlight-color: transparent;
-  }
-  a:link {
+}
+a:link {
     color: #9197A1;
     text-decoration: none;
-  }
-  a:visited {
+}
+a:visited {
     color: #9197A1;
     text-decoration: none;
-  }
-  a:hover {
+}
+a:hover {
     color: #9197A1;
     text-decoration: none;
 }

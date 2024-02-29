@@ -9,6 +9,7 @@ body {
   background-color: #F2F4F6;
   height: 100dvh;
   width: 100dvw;
+  overflow-y: scroll;
 }
 a {
   text-decoration: none;
@@ -30,6 +31,7 @@ a:hover {
   filter:invert(80%) sepia(10%) saturate(226%) hue-rotate(172deg) brightness(95%) contrast(79%);
 }
 .main-board-container {
+  width: 100%;
   margin-top: 70px;
   margin-bottom: 70px;
 }
