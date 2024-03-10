@@ -1,6 +1,7 @@
 "use client"
 import { useEffect } from "react"
 import "./page.css"
+import { saveFCMToken } from "@/utils/saveFCMToken"
 export function PushAlarmSettingPage() {
     let isAllowed = false
     useEffect(() => {
@@ -22,6 +23,9 @@ export function PushAlarmSettingPage() {
             if (permission === "granted") {
                 if(!isAllowed) {
                     console.log(permission, "허용됨")
+                    if(Notification.permission === "granted") {
+                        saveFCMToken()
+                    }
                     checking()
                     let registration = await navigator.serviceWorker.getRegistration()
                     if(registration) {

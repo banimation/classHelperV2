@@ -16,7 +16,7 @@ export async function TodayMeal() {
         cache: 'no-store'
     }
     const postMeal = await fetch("http://localhost/api/get-meal-data", fetchOption)
-    const mealJson: mealData= await postMeal.json()
+    const mealJson: mealData = await postMeal.json()
     if(mealJson.state) {
         const isExistTodayMeal = mealJson.mealData.filter((value) => value.date === ymd)
         if(isExistTodayMeal.length !== 0) {

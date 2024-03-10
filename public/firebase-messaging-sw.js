@@ -8,22 +8,61 @@ const firebaseConfig = {
     messagingSenderId: "209308819145",
     appId: "1:209308819145:web:58893a1683b7eed174b718",
     measurementId: "G-CXRS9BMHER"
-};
-// const firebaseConfig = {
-//     apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-//     authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-//     projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
-//     storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
-//     messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
-//     appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
-//     measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
-// };
+}
 const app = firebase.initializeApp(firebaseConfig);
-// const analytics = firebase.getAnalytics(app);
-const messaging = firebase.messaging(app);
-self.addEventListener("install", (e) => {
-    self.skipWaiting()
-})
-self.addEventListener('activate', (event) => {  
-    console.log("fcm sw activate..")
-})
+if (firebase.messaging.isSupported()) {
+    self.addEventListener("push", (event) => {
+        if (event.data) {
+            // 알림 메세지일 경우엔 event.data.json().notification;
+            const data = event.data.json().data;
+            const options = {
+                body: data.body,
+                icon: data.image,
+                data: {
+                    click_action: data.click_action, // 이 필드는 밑의 클릭 이벤트 처리에 사용됨
+                },
+            };
+        
+            event.waitUntil(self.registration.showNotification(data.title, options));
+        } else {
+            console.log('This push event has no data.');
+        }
+    })
+    self.addEventListener("notificationclick", (event) => {
+        event.preventDefault()
+        event.notification.close() // 알림창 닫기
+
+        const urlToOpen = event.notification.data.click_action
+        const promiseChain = clients
+        .matchAll({
+        type: 'window',
+        includeUncontrolled: true,
+        })
+        .then(function (windowClients) {
+            let matchingClient = null
+
+            for (let i = 0; i < windowClients.length; i++) {
+            const windowClient = windowClients[i]
+            if (windowClient.url.includes(urlToOpen)) {
+                matchingClient = windowClient
+                break
+            }
+        }
+
+        // 열려있다면 focus, 아니면 새로 open
+        if (matchingClient) {
+            return matchingClient.focus()
+        } else {
+            return clients.openWindow(urlToOpen)
+        }
+        })
+
+        event.waitUntil(promiseChain);
+    })
+    self.addEventListener("install", () => {
+        self.skipWaiting()
+    })
+    self.addEventListener('activate', () => {  
+        console.log("fcm sw activate..")
+    })
+}

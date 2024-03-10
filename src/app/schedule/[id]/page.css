@@ -1,0 +1,123 @@
+.detailed-schedule-container {
+    color: #9197A1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+.subject-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    border-radius: 20px;
+    height: 10vh;
+}
+.subject-title h1 {
+    margin-left: 20px;
+}
+.create-btn-container {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 50px;
+}
+.create-btn {
+    fill: #000;
+    width: 20px;
+}
+.board-item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.Different-and-Integral-Calculus {
+    color: #fff;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/subject-bg/calculus.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.Probability-and-Staristics {
+    color: #fff;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/subject-bg/Probability-and-Staristics.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.Language-and-Media {
+    color: #fff;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/subject-bg/Language-and-Media.webp);
+    background-position: center;
+    background-size: cover;
+}
+.English-Reading-and-Writing {
+    color: #fff;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/subject-bg/English-Reading-and-Writing.webp);
+    background-position: top;
+    background-size: cover;
+}
+.Geometry {
+    color: #fff;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/subject-bg/Geometry.jpg);
+    background-position: top;
+    background-size: cover;
+}
+.physics {
+    color: #fff;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/subject-bg/physics.jpg);
+    background-position: top;
+    background-size: cover;
+}
+.chemistry {
+    color: #fff;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/subject-bg/chemistry.png);
+    background-position: center;
+    background-size: cover;
+}
+.bioscience {
+    color: #fff;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/subject-bg/bioscience.webp);
+    background-position: center;
+    background-size: cover;
+}
+.Speech-and-Writing {
+    color: #fff;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/subject-bg/Speech-and-Writing.webp);
+    background-position: top;
+    background-size: cover;
+}
+.Science-and-Liberal-Arts {
+    color: #fff;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/subject-bg/Science-and-Liberal-Arts.webp);
+    background-position: center;
+    background-size: cover;
+}
+.Travel-Geography {
+    color: #fff;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/subject-bg/Travel-Geography.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.type-name {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: solid 2px #9197A1;
+}
+.assignment-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

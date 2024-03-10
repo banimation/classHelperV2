@@ -1,0 +1,92 @@
+a {
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+a:link {
+    color: none;
+    text-decoration: none;
+}
+a:visited {
+    color: none;
+    text-decoration: none;
+}
+a:hover {
+    color: none;
+    text-decoration: none;
+}
+.subject-name {
+    color: #fff;
+}
+.schedule-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+.Different-and-Integral-Calculus {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/subject-bg/calculus.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.Probability-and-Staristics {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/subject-bg/Probability-and-Staristics.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.Language-and-Media {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/subject-bg/Language-and-Media.webp);
+    background-position: center;
+    background-size: cover;
+}
+.English-Reading-and-Writing {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/subject-bg/English-Reading-and-Writing.webp);
+    background-position: top;
+    background-size: cover;
+}
+.Geometry {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/subject-bg/Geometry.jpg);
+    background-position: top;
+    background-size: cover;
+}
+.physics {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/subject-bg/physics.jpg);
+    background-position: top;
+    background-size: cover;
+}
+.chemistry {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/subject-bg/chemistry.png);
+    background-position: center;
+    background-size: cover;
+}
+.bioscience {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/subject-bg/bioscience.webp);
+    background-position: center;
+    background-size: cover;
+}
+.Speech-and-Writing {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/subject-bg/Speech-and-Writing.webp);
+    background-position: top;
+    background-size: cover;
+}
+.Science-and-Liberal-Arts {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/subject-bg/Science-and-Liberal-Arts.webp);
+    background-position: center;
+    background-size: cover;
+}
+.Travel-Geography {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/subject-bg/Travel-Geography.jpg);
+    background-position: center;
+    background-size: cover;
+}
